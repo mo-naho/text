@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>メディア創造基礎演習C</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/class.css">
+  <link rel="stylesheet" href="../css/hoverImage.css">
+  <link rel="stylesheet" href="../css/pagetop.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/favicon.png">
+</head>
+
+<body>
+  <header>
+    <a href="../index.html"><img src="../images/heading/title.png"></a>
+  </header>
+
+  <div id="main">
+    <img src="../images/heading/headline4.png" class="headline">
+    <main><!-- 以下本文 ------------------------------------------------------>
+    <img src="../images/heading/if.png" class="heading">
+    <p>与えられた条件によって行動を変えることができます。<br>
+    これを条件分岐といいます。<br>
+    条件分岐を使うとPepperにもっと複雑な動作をさせることができます。</p>
+
+<!--if-1--><h2 class="firsth2" id="1">数の大小を判定しよう</h2>
+    <p>1から10までのランダムな数を作ります。そして、その数が6未満だったら「小さい」としゃべり、6以上だったら「大きい」としゃべるプログラムを作ろう。<br>
+    もし/そうでなければブロックを使います。</p>
+    <img src="../images/block1/49.png" class="left">
+    <p class="left" style="width:580px">このブロックは黄色の「制御」にあります。<br>
+    条件が正しい時と正しくない時の2通りの動作を指示できます。</p>
+    <div class="clear"></div>
+    <p>今回の条件判断には、緑の「演算」にある小なりブロックを使います。</p>
+    <img src="../images/block1/34.png" class="left">
+    <p class="left" style="width:590px">左の値が右の値より小さいかどうかを調べます。<br>
+    入力できる値は数、文字、変数、他のブロックです。<br>
+    文字を入力した場合は文字コードの大小を比較します。<br>
+    例 ) 「あ」は「い」より小さい</p>
+    <div class="clear"></div>
+    <p>それでは次のプログラムを作ってみよう。</p>
+    <img src="../images/program/if-1.png">
+    <div class="note" id="2dice">
+      <img src="../images/heading/practice.png" class="noteHeading" alt="練習">
+      <div class="clear"></div>
+      <div class="sentence">
+        <span class="hoverImage block34">小なりブロック</span>の代わりに、<span class="hoverImage block36">大なりブロック</span>を使って例題と同じ動作をするプログラムを作ってみよう。
+      </div>
+    </div>
+
+<!--if-2--><h2 id="2">聞きとった言葉で会話を変えよう</h2>
+    <p>「犬と猫、どっちが好き？」という質問をしたあと、犬と猫を聞き取れるようにします。<br>
+    そして「犬」と聞きとったら「僕も犬が好きです」としゃべり、「猫」と聞きとったら「ねこはかわいいよね」と返して終わるプログラムを作ります。<br>
+    聞きとる部分のプログラムは2日目の<a href="lsiten.html" class="blue">2.音センサーで会話しよう</a>の復習です。先で学んだことを思い出しながら、プログラムを作ってみてください。</p>
+    <img src="../images/program/if-2.png">
+
+<!--if-3--><h2 id="3">聞きとれなかった時に対処しよう</h2>
+    <p>先のプログラムでは、「犬」と「猫」以外を聞きとった時にも「ねこはかわいいよね」と返してしまいます。<br>
+    そんな時のために、聞きとれなかった場合や、犬と猫以外を聞き取った場合は「犬か猫で答えてね」と言い、もう一度聞きとりを開始するようにします。<br>
+    <span class="hoverImage block49">もし/そうでなければブロック</span>を2つ組み合わせて使います。</p>
+    <img src="../images/program/if-3.png">
+    <p>聞きとった言葉が犬・猫の時は、<span class="hoverImage block54">止めて一覧に戻るブロック</span>でプログラムが終了します。<br>
+    聞きとった言葉が犬・猫以外の時は、「聞きとり(開始)」の動作へ移り、言葉を聞き取ると再び「言葉を聞きとったとき」の処理へ戻ります。</p>
+    <img src="../images/info/if.png">
+    <img src="../images/colmun/listen.png">
+
+    <div class="note" id="2dice">
+      <img src="../images/heading/practice.png" class="noteHeading" alt="練習">
+      <div class="clear"></div>
+      <div class="sentence">
+        <a href="images.html" class="blue">素材画像</a>から3つの画像を用意し、聞き取った言葉によって表示させる画像を変えるプログラムを作ろう。<br>
+        画像表示の方法については、1日目の<a href="display.html" class="blue">2.絵や文字を表示しよう</a>を復習してください。<br>
+        例 ) <br>
+        「犬」と「猫」と「鳥」を聞き取るようにしておく。<br>
+        「犬」と聞き取った時は犬の画像を表示する。<br>
+        「猫」と聞き取った時は猫の画像を表示する。<br>
+        それ以外の時は鳥の画像を表示する。
+      </div>
+    </div>
+
+    </main>
+    <aside>
+      <a href="../index.html" class="hover"><h3>トップページ</h3></a>
+      <a href="talk.html"><h3>1日目 はじめよう</h3></a>
+      <ol>
+        <a href="talk.html"><li>しゃべらせてみよう</li></a>
+        <a href="move.html"><li>動かしてみよう</li></a>
+        <a href="display.html"><li>絵や文字を表示しよう</li></a>
+        <a href="hw1.html">まとめの課題【1】</a>
+      </ol>
+      <a href="touchBody.html"><h3>2日目 センサーでコミュ力アップ</h3></a>
+      <ol>
+        <a href="touchBody.html"><li>タッチセンサーを使おう</li></a>
+        <a href="listen.html"><li>音センサーで会話しよう</li></a>
+        <a href="hw2.html">まとめの課題【2】</a>
+      </ol>
+      <a href="repeat.html"><h3>3日目 基本処理1</h3></a>
+      <ol>
+        <a href="repeat.html"><li>同じ動作を繰り返そう</li></a>
+        <a href="random.html"><li>ランダムな数を利用しよう</li></a>
+        <a href="hw3.html">まとめの課題【3】</a>
+      </ol>
+      <a href="if.html"><h3>4日目 基本処理2</h3></a>
+      <ol>
+        <a href="if.html" class="now"><li>条件分岐をしよう</li></a>
+        <a href="touchPosition.html"><li>タッチセンサーと条件分岐</li></a>
+        <a href="variable.html"><li>変数を使おう</li></a>
+        <a href="hw4.html">まとめの課題【4】</a>
+      </ol>
+      <a href="sound.html"><h3>余裕があったらやってみよう</h3></a>
+      <ol>
+        <a href="sound.html"><li>音声ファイルの再生</li></a>
+        <a href="tracking.html"><li>人がいたらしゃべらせよう</li></a>
+        <a href="led.html"><li>目のLEDの色を変える</li></a>
+        <a href="qichat.html"><li>シナリオを使った柔軟な会話（QiChat）</li></a>
+        <a href="qrcode.html"><li>QRコードの読み取り</li></a>
+      </ol>
+      <a href="roboblocks.html"><h3>その他</h3></a>
+      <ul>
+        <a href="roboblocks.html"><li>Robo Blocksの各種操作</li></a>
+        <a href="help.html"><li>困った時は</li></a>
+        <a href="images.html"><li>素材画像</li></a>
+      </ul>
+    </aside>
+  </div>
+  <div class="clear"></div>
+  <footer>
+    <a href="touchPosition.html"><img src="../images/nextPage.png"></a>
+  </footer>
+<!-- トップへ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+$(function () {
+   /** ページトップ処理 **/
+   // スクロールした場合
+   $(window).scroll(function() {
+       // スクロール位置が200を超えた場合
+       if ($(this).scrollTop() > 200) {
+           $('#pagetop').fadeIn();
+       } else {
+           // ページトップへをフェードアウト
+           $('#pagetop').fadeOut();
+       }
+   });
+
+   // ページトップクリック
+   $('#pagetop').click(function() {
+       // ページトップへスクロール
+       $('html, body').animate({
+           scrollTop: 0
+       }, 300);
+       return false;
+   });
+})(jQuery);
+</script>
+
+<a id="pagetop" href="#top" class="page_top" style="display: none;"><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+</body>
+</html>

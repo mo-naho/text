@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>メディア創造基礎演習C</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/class.css">
+  <link rel="stylesheet" href="../css/hoverImage.css">
+  <link rel="stylesheet" href="../css/pagetop.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/favicon.png">
+</head>
+
+<body>
+  <header>
+    <a href="../index.html"><img src="../images/heading/title.png"></a>
+  </header>
+
+  <div id="main">
+    <img src="../images/heading/headline5.png" class="headline">
+    <main><!-- 以下本文 ------------------------------------------------------>
+    <img src="../images/heading/led.png" class="heading">
+    <p>Pepperの目の周りにあるLEDを制御する方法を学習します。<br>
+    目のLEDを使用すると、より感情的な表現を行うことができます。</p>
+
+    <h2>LEDのブロック</h2>
+    <p>ブロックタブの左下の「拡張機能」の中から「LED」を選ぶことで、目のLEDの色を変えるブロックを使うことができます。</p>
+    <img src="../images/block2/73.png" class="left">
+    <p class="left" style="width:500px">目のLEDの色を設定するブロックです。<br>
+    色、彩度、明るさを組み合わせて色を指定します。</p>
+    <div class="clear"></div>
+    <img src="../images/block2/74.png" class="left">
+    <p class="left">目のLEDの色を戻すブロックです。</p>
+    <div class="clear"></div>
+
+    <h2>まばたきをさせよう</h2>
+    <p>黒と元の色を繰り返すことで、まばたきをしているようにみせることができます。<br>
+    次のプログラムを作ってみよう。</p>
+    <img src="../images/program/led-1.png">
+    <p>次のようにすると、より自然にまばたきをさせることができます。</p>
+    <img src="../images/program/led-2.png">
+
+    </main>
+    <aside>
+      <a href="../index.html" class="hover"><h3>トップページ</h3></a>
+      <a href="talk.html"><h3>1日目 はじめよう</h3></a>
+      <ol>
+        <a href="talk.html"><li>しゃべらせてみよう</li></a>
+        <a href="move.html"><li>動かしてみよう</li></a>
+        <a href="display.html"><li>絵や文字を表示しよう</li></a>
+        <a href="hw1.html">まとめの課題【1】</a>
+      </ol>
+      <a href="touchBody.html"><h3>2日目 センサーでコミュ力アップ</h3></a>
+      <ol>
+        <a href="touchBody.html"><li>タッチセンサーを使おう</li></a>
+        <a href="listen.html"><li>音センサーで会話しよう</li></a>
+        <a href="hw2.html">まとめの課題【2】</a>
+      </ol>
+      <a href="repeat.html"><h3>3日目 基本処理1</h3></a>
+      <ol>
+        <a href="repeat.html"><li>同じ動作を繰り返そう</li></a>
+        <a href="random.html"><li>ランダムな数を利用しよう</li></a>
+        <a href="hw3.html">まとめの課題【3】</a>
+      </ol>
+      <a href="if.html"><h3>4日目 基本処理2</h3></a>
+      <ol>
+        <a href="if.html"><li>条件分岐をしよう</li></a>
+        <a href="touchPosition.html"><li>タッチセンサーと条件分岐</li></a>
+        <a href="variable.html"><li>変数を使おう</li></a>
+        <a href="hw4.html">まとめの課題【4】</a>
+      </ol>
+      <a href="sound.html"><h3>余裕があったらやってみよう</h3></a>
+      <ol>
+        <a href="sound.html"><li>音声ファイルの再生</li></a>
+        <a href="tracking.html"><li>人がいたらしゃべらせよう</li></a>
+        <a href="led.html" class="now"><li>目のLEDの色を変える</li></a>
+        <a href="qichat.html"><li>シナリオを使った柔軟な会話（QiChat）</li></a>
+        <a href="qrcode.html"><li>QRコードの読み取り</li></a>
+      </ol>
+      <a href="roboblocks.html"><h3>その他</h3></a>
+      <ul>
+        <a href="roboblocks.html"><li>Robo Blocksの各種操作</li></a>
+        <a href="help.html"><li>困った時は</li></a>
+        <a href="images.html"><li>素材画像</li></a>
+      </ul>
+    </aside>
+  </div>
+  <div class="clear"></div>
+  <footer>
+    <a href="qichat.html"><img src="../images/nextPage.png"></a>
+  </footer>
+<!-- トップへ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+$(function () {
+   /** ページトップ処理 **/
+   // スクロールした場合
+   $(window).scroll(function() {
+       // スクロール位置が200を超えた場合
+       if ($(this).scrollTop() > 200) {
+           $('#pagetop').fadeIn();
+       } else {
+           // ページトップへをフェードアウト
+           $('#pagetop').fadeOut();
+       }
+   });
+
+   // ページトップクリック
+   $('#pagetop').click(function() {
+       // ページトップへスクロール
+       $('html, body').animate({
+           scrollTop: 0
+       }, 300);
+       return false;
+   });
+})(jQuery);
+</script>
+
+<a id="pagetop" href="#top" class="page_top" style="display: none;"><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+</body>
+</html>

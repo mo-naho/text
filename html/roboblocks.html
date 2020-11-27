@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>メディア創造基礎演習C</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/class.css">
+  <link rel="stylesheet" href="../css/hoverImage.css">
+  <link rel="stylesheet" href="../css/pagetop.css">
+  <link rel="stylesheet" href="../css/tabs.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/favicon.png">
+</head>
+
+<body>
+  <header>
+    <a href="../index.html"><img src="../images/heading/title.png"></a>
+  </header>
+
+  <div id="main">
+    <img src="../images/heading/headline6.png" class="headline">
+    <main><!-- 以下本文 ------------------------------------------------------>
+    <img src="../images/heading/roboblocks.png" class="heading">
+
+    <h2 class="firsth2">画面の各機能</h2>
+    <div class="tabs">
+      <input id="all" type="radio" name="tab_item" checked>
+      <label class="tab_item" for="all">全体</label>
+      <input id="block" type="radio" name="tab_item">
+      <label class="tab_item" for="block">ブロック</label>
+      <input id="image" type="radio" name="tab_item">
+      <label class="tab_item" for="image">画像</label>
+      <input id="sound" type="radio" name="tab_item">
+      <label class="tab_item" for="sound">音</label>
+      <div class="tab_content" id="all_content">
+        <div class="tab_content_description">
+          <img src="../images/roboBlocks/all.png">
+          <ol>
+            <li>「保存」<br>
+            作ったプログラムをzipファイルとして、自分のパソコンに保存する</li>
+            <li>「ロード」<br>
+            パソコンに保存したプログラムを開く</li>
+            <li>「ロボットに送る」<br>
+            ネットを通してPepper本体にプログラムを送る</li>
+            <li>「ログアウト」<br>
+            ログアウトする</li>
+            <li>「緑の旗」<br>
+            パソコンでプログラムを実行する</li>
+            <li>「赤い八角形」<br>
+            パソコンで実行中のプログラムを止めたり、画像の表示や移動などのPepperの状態をリセットする</li>
+            <li>「バーチャルロボット」<br>
+            プログラムをパソコン上で実行した時に、実際のPepperとほとんど同じ動きをする<br>
+            拡張機能の「追跡」や「QRコード」などの動作は確認できません</li>
+            <li>「バーチャルロボットの表示/非表示」<br>
+            バーチャルロボットの表示、非表示を切り替える</li>
+            <li>「バーチャルロボットエリアの拡大、縮小」<br>
+            バーチャルロボットエリアを拡大、縮小する</li>
+            <li>「バーチャルロボットの全画面表示」<br>
+            バーチャルとボットの全画面表示の切り替えをする</li>
+            <li>「バーチャルロボットのカメラ切り替え」<br>
+            バーチャルロボットのカメラの向きを切り替える</li>
+            <li>「バーチャルロボットのタブレット」<br>
+            バーチャルロボットのタブレットと同じ表示がされます<br>
+            タッチセンサーも動作します</li>
+          </ol>
+        </div>
+      </div>
+      <div class="tab_content" id="block_content">
+        <div class="tab_content_description">
+          <img src="../images/roboBlocks/block.png">
+          <ol>
+            <li>「画像」<br>
+            画像タブに切り替える</li>
+            <li>「音」<br>
+            音タブに切り替える</li>
+            <li>「拡張機能」<br>
+            「追跡」や「LED」などを制御するブロックを追加する</li>
+            <li>「ブロック一覧」<br>
+            プログラムに使うことのできるブロックの一覧<br>
+            ここにブロックを戻すとブロックを消すことができる</li>
+            <li>「プログラミングエリア」<br>
+            ブロック一覧から移動させたブロックを繋げて、プログラムを作るエリア<br></li>
+            <li>「拡大」<br>
+            ブロックのサイズを大きくする</li>
+            <li>「縮小」<br>
+            ブロックのサイズを小さくする</li>
+            <li>「等倍」<br>
+            ブロックのサイズをデフォルトに戻す</li>
+          </ol>
+        </div>
+      </div>
+      <div class="tab_content" id="image_content">
+        <div class="tab_content_description">
+          <img src="../images/roboBlocks/image.png">
+          <ol>
+            <li>「ブロック」<br>
+            ブロックタブに切り替える</li>
+            <li>「使う画像一覧」<br>
+            プログラムに使える画像のあるエリア</li>
+            <li>「画像を追加」<br>
+            自分のパソコンから画像をアップロードする</li>
+            <li>「画像一覧」<br>
+            デフォルトの画像やアップロードした画像の一覧<br>
+            画像をクリックすると③のエリアに画像を追加することができ、プログラムで使うことができる</li>
+          </ol>
+        </div>
+      </div>
+      <div class="tab_content" id="sound_content">
+        <div class="tab_content_description">
+          <img src="../images/roboBlocks/sound.png">
+          <ol>
+            <li>「使う音一覧」<br>
+            プログラムに使える音声データのあるエリア</li>
+            <li>「音を追加」<br>
+            自分のパソコンから音声データをアップロードする<br>
+            アップロードできるファイルは ogg または wav です</li>
+            <li>「音一覧」<br>
+            デフォルトの音声データやアップロードした音声データの一覧<br>
+            画像をクリックすると②のエリアに音声データを追加することができ、プログラムで使うことができる</li></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <h2>ブロックの切り離し方</h2>
+    <p>組み合わたせたブロックは、下にくっついたものをまとめて移動させます。<br>
+    図のような方法でブロックを切り離すことができます。</p>
+    <img src="../images/info/cut.gif">
+
+    </main>
+    <aside>
+      <a href="../index.html" class="hover"><h3>トップページ</h3></a>
+      <a href="talk.html"><h3>1日目 はじめよう</h3></a>
+      <ol>
+        <a href="talk.html"><li>しゃべらせてみよう</li></a>
+        <a href="move.html"><li>動かしてみよう</li></a>
+        <a href="display.html"><li>絵や文字を表示しよう</li></a>
+        <a href="hw1.html">まとめの課題【1】</a>
+      </ol>
+      <a href="touchBody.html"><h3>2日目 センサーでコミュ力アップ</h3></a>
+      <ol>
+        <a href="touchBody.html"><li>タッチセンサーを使おう</li></a>
+        <a href="listen.html"><li>音センサーで会話しよう</li></a>
+        <a href="hw2.html">まとめの課題【2】</a>
+      </ol>
+      <a href="repeat.html"><h3>3日目 基本処理1</h3></a>
+      <ol>
+        <a href="repeat.html"><li>同じ動作を繰り返そう</li></a>
+        <a href="random.html"><li>ランダムな数を利用しよう</li></a>
+        <a href="hw3.html">まとめの課題【3】</a>
+      </ol>
+      <a href="if.html"><h3>4日目 基本処理2</h3></a>
+      <ol>
+        <a href="if.html"><li>条件分岐をしよう</li></a>
+        <a href="touchPosition.html"><li>タッチセンサーと条件分岐</li></a>
+        <a href="variable.html"><li>変数を使おう</li></a>
+        <a href="hw4.html">まとめの課題【4】</a>
+      </ol>
+      <a href="sound.html"><h3>余裕があったらやってみよう</h3></a>
+      <ol>
+        <a href="sound.html"><li>音声ファイルの再生</li></a>
+        <a href="tracking.html"><li>人がいたらしゃべらせよう</li></a>
+        <a href="led.html"><li>目のLEDの色を変える</li></a>
+        <a href="qichat.html"><li>シナリオを使った柔軟な会話（QiChat）</li></a>
+        <a href="qrcode.html"><li>QRコードの読み取り</li></a>
+      </ol>
+      <a href="roboblocks.html"><h3>その他</h3></a>
+      <ul>
+        <a href="roboblocks.html" class="now"><li>Robo Blocksの各種操作</li></a>
+        <a href="help.html"><li>困った時は</li></a>
+        <a href="images.html"><li>素材画像</li></a>
+      </ul>
+    </aside>
+  </div>
+  <div class="clear"></div>
+  <footer>
+    <!-- <a href=".html"><img src="../images/nextPage.png"></a> -->
+  </footer>
+<!-- トップへ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+$(function () {
+   /** ページトップ処理 **/
+   // スクロールした場合
+   $(window).scroll(function() {
+       // スクロール位置が200を超えた場合
+       if ($(this).scrollTop() > 200) {
+           $('#pagetop').fadeIn();
+       } else {
+           // ページトップへをフェードアウト
+           $('#pagetop').fadeOut();
+       }
+   });
+
+   // ページトップクリック
+   $('#pagetop').click(function() {
+       // ページトップへスクロール
+       $('html, body').animate({
+           scrollTop: 0
+       }, 300);
+       return false;
+   });
+})(jQuery);
+</script>
+
+<a id="pagetop" href="#top" class="page_top" style="display: none;"><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+</body>
+</html>

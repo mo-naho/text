@@ -1,0 +1,99 @@
+span.hoverImage{
+  position: relative;
+  margin: 0;
+  text-decoration: underline;
+  color: darkblue;
+}
+span.hoverImage:after{
+  content: "";
+  position: absolute;
+  top: 1.2em;
+  left: 0.2em;
+  display: inline-block;
+  pointer-events: none;
+  /* width: 150px; */
+  /* height: 60px; */
+}
+span.hoverImage.start:after, span.hoverImage.stop:after{
+  width: 25px;
+  height: 25px;
+}
+span.hoverImage:hover:after{
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+/* 表示する画像 */
+span.start:hover:after{
+  background-image: url(../images/roboBlocks/start.png);
+}
+span.stop:hover:after{
+  background-image: url(../images/roboBlocks/stop.png);
+}
+
+span.block1:hover:after{
+  background-image: url(../images/block1/1.png);
+}
+span.hoverImage.block1:after{
+  width: 160px;
+  height: 60px;
+}
+span.block2:hover:after{
+  background-image: url(../images/block1/2.png);
+}
+span.hoverImage.block2:after{
+  width: 315px;
+  height: 47px;
+}
+span.block19:hover:after{
+  background-image: url(../images/block1/19.png);
+}
+span.hoverImage.block19:after{
+  width: 229px;
+  height: 30px;
+}
+span.block34:hover:after{
+  background-image: url(../images/block1/34.png);
+}
+span.hoverImage.block34:after{
+  width: 119px;
+  height: 33px;
+}
+span.block36:hover:after{
+  background-image: url(../images/block1/36.png);
+}
+span.hoverImage.block36:after{
+  width: 118px;
+  height: 34px;
+}
+span.block49:hover:after{
+  background-image: url(../images/block1/49.png);
+}
+span.hoverImage.block49:after{
+  width: 130px;
+  height: 137px;
+}
+span.block54:hover:after{
+  background-image: url(../images/block1/54.png);
+}
+span.hoverImage.block54:after{
+  width: 117px;
+  height: 40px;
+}
+
+span.block75:hover:after{
+  background-image: url(../images/block2/75.png);
+}
+span.hoverImage.block75:after{
+  width: 196px;
+  height: 53px;
+}
+span.block77:hover:after{
+  background-image: url(../images/block2/77.png);
+}
+span.hoverImage.block77:after{
+  width: 334px;
+  height: 52px;
+}

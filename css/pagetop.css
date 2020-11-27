@@ -1,0 +1,28 @@
+/* ページトップへ戻るボタン */
+#pagetop {
+    position:fixed;
+    bottom:7px;
+    right:7px;
+    padding:10px 12px;
+    color: #353535; /* 文字色 */
+    font-size:16px;
+    text-decoration:none;
+    background: linear-gradient(
+    -45deg,
+    #fff 25%,
+    #f4f4ed 25%, #f4f4ed 50%,
+    #fff 50%, #fff 75%,
+    #f4f4ed 75%, #f4f4ed
+  );
+  background-size: 4px 4px;
+  border: 3px solid #c9c19f; /* ボーダーの色 */
+  border-radius: 50%; /* ボタンの丸み */
+  opacity: 0.6; /* ボタンの透明度 */
+  z-index: 99;
+}
+
+/* ページトップへ戻るボタン：ホバー時 */
+#pagetop:hover {
+    color: #ffffff; /* 文字色 */
+    background:#c9c19f;/* 背景色 */
+}

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>メディア創造基礎演習C</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/class.css">
+  <link rel="stylesheet" href="../css/hoverImage.css">
+  <link rel="stylesheet" href="../css/pagetop.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/favicon.png">
+</head>
+
+<body>
+  <header>
+    <a href="../index.html"><img src="../images/heading/title.png"></a>
+  </header>
+
+  <div id="main">
+    <img src="../images/heading/headline5.png" class="headline">
+    <main><!-- 以下本文 ------------------------------------------------------>
+    <img src="../images/heading/qichat.png" class="heading">
+    <p>シナリオを用意することで、Pepperとの会話をより柔軟なものにできます。<br>
+    シナリオに基づく会話のプログラミングには、QiChat(キーチャット)というブロックを使います。</p>
+
+    <h3>目次</h3>
+    <ul class="qichatIndex">
+      <li><a href="qichat.html#1">一言会話</a></li>
+      <li><a href="qichat.html#2">分岐する会話</a></li>
+      <li><a href="qichat.html#3">ワイルドカード</a></li>
+      <li><a href="qichat.html#4">コンセプト</a></li>
+      <li><a href="qichat.html#5">OR条件</a></li>
+      <li><a href="qichat.html#6">参照</a></li>
+      <li><a href="qichat.html#7">ワイルドカードと参照</a></li>
+      <li><a href="qichat.html#8">変数</a></li>
+    </ul>
+
+    <h2 id="0">一言会話のシナリオ</h2>
+    <p>人が「ただいま」というとPepperが「おかえり」と言ってくれるシナリオを考えよう。<br>
+    このシナリオに「トピック：あいさつ」という名前をつけて、フローチャートで表すと次のようになります。</p>
+    <img src="../images/program/flowchart-1.png">
+
+    <h2>QiChatのブロック</h2>
+    <p>シナリオをプログラミングするには、QiChatブロックを使います。<br>
+    ブロックタブの左下の「拡張機能」の中から「QiChat」を選ぶことで、QiChatのブロックを使うことができます。</p>
+    <img src="../images/block2/75.png" class="left">
+    <p class="left" style="">トピックブロックです。<br>
+    QiChatのトピック名を設定します。<br>
+    QiChatを使う時には必ず最初に置きます。</p>
+    <div class="clear"></div>
+    <img src="../images/block2/77.png" class="left">
+    <p class="left" style="width:340px">u/ユーザ/ロボットブロックです。<br>
+    会話の階層(u)、人間のセリフ(ユーザ)、Pepperのセリフ(ロボット)を設定します。<br>
+    トピックブロックと次で説明する開始ブロックの間に置きます。</p>
+    <div class="clear"></div>
+    <img src="../images/block2/78.png" class="left">
+    <p class="left" style="">QiChat開始ブロックです。<br>
+    u/ユーザ/ロボットブロックで設定した会話を開始します。</p>
+    <div class="clear"></div>
+    <img src="../images/block2/79.png" class="left">
+    <p class="left" style="">QiChat終了ブロックです。<br>
+    QiChatの会話を終了します。</p>
+    <div class="clear"></div>
+    <!-- <img src="../images/block2/80.png" class="left">
+    <p class="left" style="">QiChatの言語ブロックです。<br>
+    QiChatの言語を設定します。</p>
+    <div class="clear"></div> -->
+
+<!--qichat-1--><h2 id="1">一言会話のプログラム</h2>
+    <p>QiChatブロックを使って<a href="qichat.html#0">「トピック：あいさつ」</a>をプログラミングしてみよう。<br>
+    <span class="hoverImage block77">u/ユーザ/ロボットブロック</span>に、会話の階層(u)、人間のセリフ(ユーザ)、Pepperのセリフ(ロボット)を設定します。<br>
+    一言会話の場合、会話の階層uは0です。<br>
+    このブロックは、QiChatのトピックブロックとQiChatを開始ブロックの間に置きます。</p>
+    <img src="../images/program/qichat-1.png">
+    <div class="note">
+      <img src="../images/heading/practice.png" class="noteHeading" alt="練習">
+      <div class="clear"></div>
+      <div class="sentence">
+        <span class="hoverImage block77">u/ユーザ/ロボットブロック</span>を使って、「おやすみなさい」と聞き取った時に「いい夢見てね」と返すプログラムを作ってみよう。
+      </div>
+    </div>
+
+<!--qichat-2--><h2 id="2">分岐する会話のシナリオ</h2>
+    <p>お昼ご飯について会話するシナリオを考えてみよう。人が「お昼ご飯は何？」と聞くと、Pepperが好みを聞き返してきて、その質問に答えるとさらに返してくるシナリオを考えることにします。<br>
+    このシナリオに「トピック：昼ごはん」という名前をつけて、フローチャートで表すと次のようになります。会話の階層uは0から2までの3階層になります。</p>
+    <img src="../images/program/flowchart-2.png" class="width100">
+
+    <h2>分岐する会話のプログラム</h2>
+    <p>「トピック：昼ごはん」をQiChatブロックを使ってプログラミングしてみよう。<br>
+    次の動画をみよう。</p>
+    <video src="../videos/qichat-2.mp4" controls></video>
+
+<!--qichat-3--><h2 id="3">ワイルドカードを使ったシナリオ</h2>
+    <p>セリフの一部にどのような単語やフレーズが入ってもいても、Pepperに同じように返事をさせる方法を学習します。<br>
+    記号「*(アスタリスク)」を使用します。この*をワイルドカードと呼びます。<br>
+    表のように色々な人が自己紹介したとき、Pepperにいつも「よろしくお願いします」と返事をさせたいと思います。</p>
+    <table>
+      <tr>
+        <th>人間のセリフ</th><th>Pepperのセリフ</th>
+      </tr>
+      <tr>
+        <td>私の名前は<u>太郎</u>です<br>
+            私の名前は<u>花子</u>です<br>
+            私の名前は<u>メアリー</u>です</td>
+        <td>よろしくお願いします</td>
+      </tr>
+    </table><br>
+    <p>このシナリオに「トピック：名前」という名前をつけて、*を使ってフローチャートで表すと次のようになります。</p>
+    <img src="../images/program/flowchart-3.png">
+
+    <h2>ワイルドカードを使ったプログラム</h2>
+    <p>「トピック：名前」をQiChatブロックを使ってプログラミングしてみよう。<br>
+    それでは次のプログラミングを作ろう。</p>
+    <img src="../images/program/qichat-3.png">
+    <div class="note">
+      <img src="../images/heading/practice.png" class="noteHeading" alt="練習">
+      <div class="clear"></div>
+      <div class="sentence">
+        表で左のように人が話したとき、右のようにPepperが返事をするプログラムを、「*(ワイルドカード)」を使って作ってみよう
+      </div>
+      <table>
+        <tr>
+          <th>人間のセリフ</th><th>Pepperのセリフ</th>
+        </tr>
+        <tr>
+          <td>私は<u>野球</u>を習っています<br>
+              私は<u>サッカー</u>を習っています<br>
+              私は<u>英語</u>を習っています</td>
+          <td>かっこいいですね</td>
+        </tr>
+        <tr>
+          <td>私は<u>猫</u>が好きです<br>
+              私は<u>ハンバーグ</u>が好きです<br>
+              私は<u>晴れた日</u>が好きです</td>
+          <td>いいですね、僕も好きです</td>
+        </tr>
+      </table>
+      <div class="clear"></div>
+    </div>
+
+
+<!--qichat-4--><h2 id="4">コンセプトを使ったシナリオ</h2>
+    <p>同義語や同ジャンルの言葉をひとまとめにして、１つの言葉(コンセプト)で扱うことができます。そのようにすると、より柔軟な会話のプログラミングが可能になります。<br>
+    例えば肯定的な返事をするときは、「はい」や「いいよ」と言ったりします。これらを「yes」という１つのコンセプト名で扱うことにします。<br>
+    肯定と否定の言葉を次の表にまとめました。</p>
+    <table>
+      <tr>
+        <th>コンセプト名</th><th>言葉</th>
+      </tr>
+      <tr>
+        <td>yes</td>
+        <td>はい<br>
+            うん<br>
+            いいよ<br>
+            おっけー</td>
+      </tr>
+      <tr>
+        <td>no</td>
+        <td>いいえ<br>
+            だめ<br>
+            無理<br>
+            いや</td>
+      </tr>
+    </table><br>
+    <p>このコンセプトを使って、次のような分岐する会話を考えます。<br>
+    このシナリオに「トピック：お誘い」という名前をつけます。</p>
+    <img src="../images/program/flowchart-4-1.png">
+
+    <h2>コンセプトを使ったプログラム</h2>
+    <p>「トピック：お誘い」を作ってみよう。<br>
+    QiChatのコンセプトブロックを使います。</p>
+    <img src="../images/block2/76.png" class="left">
+    <p class="left" style="width:340px">QiChatのコンセプト名と内容を設定します。<br>
+    コンセプト名は日本語でつけることができないので、半角英数字を使って英単語かローマ字で設定します。<br>
+    コンセプトの内容には複数の言葉を入力します。<br>
+    言葉と言葉の間は半角スペースで区切ります。
+    このブロックは<span class="hoverImage block75">QiChatのトピックブロック</span>のすぐ下に置きます。</p>
+    <div class="clear"></div>
+    <p>設定したコンセプトを使うには、<span class="hoverImage block77">u/ユーザ/ロボットブロック</span>のユーザに「~(チルダ)」をつけてコンセプト名を記述します。<br>
+    次のプログラムを作ろう。</p>
+    <img src="../images/program/qichat-4.png">
+
+    <div class="note">
+      <img src="../images/heading/practice.png" class="noteHeading" alt="練習">
+      <div class="clear"></div>
+      <div class="sentence">
+        飲み物のジャンルのコンセプトを作り、次のような会話のプログラムを作ってみよう。<br>
+        コンセプト：飲み物には4個以上の言葉を設定しましょう。
+      </div>
+      <img src="../images/program/flowchart-4-2.png">
+      <div class="clear"></div>
+    </div>
+
+
+<!--qichat-5--><h2 id="5">OR条件を使ったシナリオ</h2>
+    <p>呼びかけや返事の言葉はいくつも考えられます。<br>
+    ここではOR条件で何通りかの言葉を使って会話する方法を学習します。<br>
+    表のような呼びかけと返事の組み合わせを考えてみましょう。</p>
+    <table>
+      <tr>
+        <th>人間のセリフ</th><th>Pepperのセリフ</th>
+      </tr>
+      <tr>
+        <td>おーい<br>
+            ペッパー<br>
+            ねえねえ</td>
+        <td>はいはい？<br>
+            なにー？　　　　+ 呼びましたか？<br>
+            えっとぉ</td>
+      </tr>
+    </table>
+    <p>このシナリオに「トピック：呼びかけ」と名前をつけ、フローチャートで表すと次のようになります。</p>
+    <img src="../images/program/flowchart-5.png">
+
+    <h2>OR条件を使ったプログラム</h2>
+    <p>「トピック：呼びかけ」をQiChatブロックを使ってプログラミングしてみます。<br>
+    「いくつかある言葉の内でどれか１つ」という設定(OR条件)は「[](カギ括弧)」を使い、「 [言葉A 言葉B 言葉C] 」と記述します。言葉と言葉の間に半角スペースを入れることで区切ります。<br>
+    Pepperのセリフの「呼びましたか？」は共通している部分なので、[](カギ括弧)でくくった言葉の後ろにそのまま入力します。<br>
+    次のプログラムを作ろう。</p>
+    <img src="../images/program/qichat-5.png">
+    <p>3通り用意した人の呼びかけに対して、Pepperは3通りの返事をランダムに返します。</p>
+
+<!--qichat-6--><h2 id="6">参照を使ったシナリオ</h2>
+    <p>人間との会話では、聞いた言葉を使って返事するものがあります。<br>
+    ここでは、聞いた言葉を一度変数に入れ、それを参照して返事する方法を学習します。</p>
+    <table>
+      <tr>
+        <th>人間のセリフ</th><th>Pepperのセリフ</th>
+      </tr>
+      <tr>
+        <td>おはよう</td><td><u>おはよう</u>。今日も頑張ろう</td>
+      </tr>
+      <tr>
+        <td>こんにちは</td><td><u>こんにちは</u>。今日も頑張ろう</td>
+      </tr>
+      <tr>
+        <td>こんばんは</td><td><u>こんばんは</u>。今日も頑張ろう</td>
+      </tr>
+    </table>
+    <p>このシナリオに「トピック：あいさつ」と名前をつけ、フローチャートで表すと次のようになります。</p>
+    <img src="../images/program/flowchart-6.png">
+
+    <h2>参照を使ったプログラム</h2>
+    <p>「トピック：あいさつ」のプログラムを作ってみよう。<br>
+    言葉を変数へ代入する方法は「_(アンダースコア)」をつけ、「 _[言葉A 言葉B 言葉C] 」と記述します。言葉と言葉の間に半角スペースを入れる事で区切ります。<br>
+    代入された言葉を参照するには、「$1」と記述します。<br>
+    「$1」の後ろに文字を入力する場合は、<u>「$1」と文字の間に半角スペースを入れてください。</u><br>
+    「$1」の前に文字を入力するときは、半角スペースは無くても大丈夫です。<br>
+    次のプログラムを作ろう。</p>
+    <img src="../images/program/qichat-6.png">
+
+<!--qichat-7--><h2 id="7">ワイルドカードと参照を組み合わせよう</h2>
+    <p>ワイルドカード( * )と参照( _ , $1)を組み合わせてみよう。<br>
+    次のようなプログラムを作り、どう動くのか確認してみよう。</p>
+    <img src="../images/program/qichat-7.png">
+
+<!---qichat-8--><h2 id="8">QiChatの変数を使ったシナリオ</h2>
+    <p>参照を使ったプログラムでは、変数に代入した言葉は、すぐ次の返事にしか使えませんでした。変数に名前をつければ、他の場所でも使えるようになります。<br>
+    ここでは、変数$1に名前をつけて、それを他の場所で使う方法を学習します。<br>
+    好きな動物を聞き取り、「ペッパーは？」と聞かれたら同じ動物を答えるシナリオを考えます。<br>
+    このシナリオに「トピック：好きな動物」と名前をつけ、フローチャートで表すと次のようになります。</p>
+    <img src="../images/program/flowchart-8.png">
+
+    <h2>QiChatの変数を使ったプログラム</h2>
+    <p>「トピック：好きな動物」をプログラミングしてみよう。<br>
+    変数へ名前をつけるには、「$変数名=$1」と記述します。名前は半角英数字の英単語かローマ字で指定します。この部分は読み上げられません。<br>
+    Pepperのセリフに続けて「$変数名=$1」を記述します。<br>
+    変数に代入された言葉を使うには、「$変数名」と記述します。<br>
+    次のプログラムを作ろう。</p>
+    <img src="../images/program/qichat-8.png">
+
+<!--qichat-9--><h2>QiChatを使った自然な会話のシナリオ</h2>
+    <p>今まで学んだQiChatを利用して、自然な会話をするプログラムを作ってみます。<br>
+    今回はレストランでの注文のシナリオを考えます。<br>
+    このシナリオは「トピック：注文」という名前をつけます。</p>
+    <img src="../images/program/flowchart-9.png">
+
+    <h2>QiChatを使った自然な会話のプログラム</h2>
+    <p>「トピック：注文」をプログラミングしてみよう。<br>
+    </p>
+    <img src="../images/program/qichat-9.png">
+
+
+    </main>
+    <aside>
+      <a href="../index.html" class="hover"><h3>トップページ</h3></a>
+      <a href="talk.html"><h3>1日目 はじめよう</h3></a>
+      <ol>
+        <a href="talk.html"><li>しゃべらせてみよう</li></a>
+        <a href="move.html"><li>動かしてみよう</li></a>
+        <a href="display.html"><li>絵や文字を表示しよう</li></a>
+        <a href="hw1.html">まとめの課題【1】</a>
+      </ol>
+      <a href="touchBody.html"><h3>2日目 センサーでコミュ力アップ</h3></a>
+      <ol>
+        <a href="touchBody.html"><li>タッチセンサーを使おう</li></a>
+        <a href="listen.html"><li>音センサーで会話しよう</li></a>
+        <a href="hw2.html">まとめの課題【2】</a>
+      </ol>
+      <a href="repeat.html"><h3>3日目 基本処理1</h3></a>
+      <ol>
+        <a href="repeat.html"><li>同じ動作を繰り返そう</li></a>
+        <a href="random.html"><li>ランダムな数を利用しよう</li></a>
+        <a href="hw3.html">まとめの課題【3】</a>
+      </ol>
+      <a href="if.html"><h3>4日目 基本処理2</h3></a>
+      <ol>
+        <a href="if.html"><li>条件分岐をしよう</li></a>
+        <a href="touchPosition.html"><li>タッチセンサーと条件分岐</li></a>
+        <a href="variable.html"><li>変数を使おう</li></a>
+        <a href="hw4.html">まとめの課題【4】</a>
+      </ol>
+      <a href="sound.html"><h3>余裕があったらやってみよう</h3></a>
+      <ol>
+        <a href="sound.html"><li>音声ファイルの再生</li></a>
+        <a href="tracking.html"><li>人がいたらしゃべらせよう</li></a>
+        <a href="led.html"><li>目のLEDの色を変える</li></a>
+        <a href="qichat.html" class="now"><li>シナリオを使った柔軟な会話（QiChat）</li></a>
+        <a href="qrcode.html"><li>QRコードの読み取り</li></a>
+      </ol>
+      <a href="roboblocks.html"><h3>その他</h3></a>
+      <ul>
+        <a href="roboblocks.html"><li>Robo Blocksの各種操作</li></a>
+        <a href="help.html"><li>困った時は</li></a>
+        <a href="images.html"><li>素材画像</li></a>
+      </ul>
+    </aside>
+  </div>
+  <div class="clear"></div>
+  <footer>
+    <a href="qrcode.html"><img src="../images/nextPage.png"></a>
+  </footer>
+<!-- トップへ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+$(function () {
+   /** ページトップ処理 **/
+   // スクロールした場合
+   $(window).scroll(function() {
+       // スクロール位置が200を超えた場合
+       if ($(this).scrollTop() > 200) {
+           $('#pagetop').fadeIn();
+       } else {
+           // ページトップへをフェードアウト
+           $('#pagetop').fadeOut();
+       }
+   });
+
+   // ページトップクリック
+   $('#pagetop').click(function() {
+       // ページトップへスクロール
+       $('html, body').animate({
+           scrollTop: 0
+       }, 300);
+       return false;
+   });
+})(jQuery);
+</script>
+
+<a id="pagetop" href="#top" class="page_top" style="display: none;"><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+</body>
+</html>

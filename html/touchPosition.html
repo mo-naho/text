@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>メディア創造基礎演習C</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/class.css">
+  <link rel="stylesheet" href="../css/hoverImage.css">
+  <link rel="stylesheet" href="../css/pagetop.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/favicon.png">
+</head>
+
+<body>
+  <header>
+    <a href="../index.html"><img src="../images/heading/title.png"></a>
+  </header>
+
+  <div id="main">
+    <img src="../images/heading/headline4.png" class="headline">
+    <main><!-- 以下本文 ------------------------------------------------------>
+    <img src="../images/heading/touchPosition.png" class="heading">
+    <p>普段使っているスマートフォンのように、画面の触られた位置によって動作を切り替える方法を学びましょう。<br>
+    今回取り上げる内容は、2日目<a href="touchBody.html#touchScreen-1" class="blue">2.タッチセンサーを使おう</a>で学んだ内容を前提とするものです。<br>
+    記憶が曖昧な人は復習した上で、先へ進んでください。</p>
+
+<!--touchPosition-1--><h2 class="firsth2">画面のタッチで2択を答えよう</h2>
+    <p class="left" style="width:390px">RoboBlocksの「画像」タブに入っている「A・B」の画像を使って、画面のタッチで2択を答えるプログラムを作ります。<br><br>
+    Pepperに「円周率の3.14の次の数字はなんでしょう。1だと思うならAを、2だと思うならBを押してね」としゃべらせます。その後、「A・B」の画像を表示し、画面のタッチ待ち受けを開始します。</p>
+    <img src="../images/material/default/2btn_ab.png" class="right width40">
+    <div class="clear"></div>
+    <p>画面にタッチされたらタッチ待ち受けを終了します。<br>
+    そして、Aをタッチしたら「おめでとうございます！正解です」と言い、Bをタッチしたら「残念、不正解です」と言うようにします。<br>
+    このプログラムでは、A・Bどちらにタッチしたかを判定するため、画面の触られた位置(よこ軸)を使います。<br>
+    画面の位置(よこ軸)を%で求めて、50%未満ならA、50%以上ならBにタッチしたと判定することにします。</p>
+    <p>それでは次のプログラムを作ろう。</p>
+    <img src="../images/program/touchPosition-1.png">
+    <h3>Pepperのセリフ</h3>
+    <p>円周率の3.14の次の数字はなんでしょう。<br>
+    1だと思うならAを、2だと思うならBを押してね</p>
+    <p>おめでとうございます！正解です<br>
+    残念、不正解です</p>
+    <img src="../images/info/touchPosition-1.png">
+    <div class="note">
+      <img src="../images/heading/practice.png" class="noteHeading" alt="練習">
+      <div class="clear"></div>
+      <div class="sentence">
+        上のプログラムを「◯・✕」や「はい・いいえ」の画像を使って2択を答えるものに作り替えよう。
+      </div>
+    </div>
+
+<!--touchPosition-2--><h2>画面のタッチで4択を答えよう</h2>
+    <p class="left" style="width:390px">RoboBlocksの「画像」タブに入っている「①・②・③・④」の画像を使います。<br>
+    Pepperが問題と選択肢を言った後、タッチで答えを選ぶプログラムを作ります。<br>
+    今回は間違った選択肢の時にもう一度タッチ待ち受けを開始することで、正解を選ぶまでプログラムが終了しないようにします。</p>
+    <img src="../images/material/default/4btn_kazu.png" class="width40 right">
+    <div class="clear"></div>
+    <p>プログラムが縦に長くなるため、2段階に分けてプログラムを作ります。<br>
+    まず次の例と同じプログラムを作ろう。</p>
+    <img src="../images/program/touchPosition-2-1.png">
+    <h3>Pepperのセリフ</h3>
+    <p>飛行機の中で食べられるように作られた野菜があります。その野菜は次のうちどれでしょう？<br>
+    1、ミニトマト。2、パプリカ。3、アボカド。4、ズッキーニ</p>
+
+    <div class="note">
+      <img src="../images/heading/check.png" class="noteHeading" alt="チェック">
+      <div class="clear"></div>
+      <div class="sentence">
+        <span class="hoverImage block19">画面の触られた位置ブロック</span>のよこ軸、たて軸をプログラム例と同じように変えているか確認しよう。
+      </div>
+    </div>
+
+    <p>次は赤で囲んだ4箇所を追加していきます。</p>
+    <img src="../images/program/touchPosition-2-2.png">
+    <h3>Pepperのセリフ</h3>
+    <p>おめでとうございます。正解です！また遊んでね</p>
+    <p>残念、パプリカではありません。<br>
+    1、ミニトマト。3、アボカド。4、ズッキーニ<br>
+    他の答えを選ぼう</p>
+    <p>残念、アボカドではありません。<br>
+    1、ミニトマト。2、パプリカ。4、ズッキーニ<br>
+    他の答えを選ぼう</p>
+    <p>残念、ズッキーニではありません。<br>
+    1、ミニトマト。2、パプリカ。3、アボカド<br>
+    他の答えを選ぼう</p>
+    <img src="../images/info/touchPosition-2.png">
+
+    </main>
+    <aside>
+      <a href="../index.html" class="hover"><h3>トップページ</h3></a>
+      <a href="talk.html"><h3>1日目 はじめよう</h3></a>
+      <ol>
+        <a href="talk.html"><li>しゃべらせてみよう</li></a>
+        <a href="move.html"><li>動かしてみよう</li></a>
+        <a href="display.html"><li>絵や文字を表示しよう</li></a>
+        <a href="hw1.html">まとめの課題【1】</a>
+      </ol>
+      <a href="touchBody.html"><h3>2日目 センサーでコミュ力アップ</h3></a>
+      <ol>
+        <a href="touchBody.html"><li>タッチセンサーを使おう</li></a>
+        <a href="listen.html"><li>音センサーで会話しよう</li></a>
+        <a href="hw2.html">まとめの課題【2】</a>
+      </ol>
+      <a href="repeat.html"><h3>3日目 基本処理1</h3></a>
+      <ol>
+        <a href="repeat.html"><li>同じ動作を繰り返そう</li></a>
+        <a href="random.html"><li>ランダムな数を利用しよう</li></a>
+        <a href="hw3.html">まとめの課題【3】</a>
+      </ol>
+      <a href="if.html"><h3>4日目 基本処理2</h3></a>
+      <ol>
+        <a href="if.html"><li>条件分岐をしよう</li></a>
+        <a href="touchPosition.html" class="now"><li>タッチセンサーと条件分岐</li></a>
+        <a href="variable.html"><li>変数を使おう</li></a>
+        <a href="hw4.html">まとめの課題【4】</a>
+      </ol>
+      <a href="sound.html"><h3>余裕があったらやってみよう</h3></a>
+      <ol>
+        <a href="sound.html"><li>音声ファイルの再生</li></a>
+        <a href="tracking.html"><li>人がいたらしゃべらせよう</li></a>
+        <a href="led.html"><li>目のLEDの色を変える</li></a>
+        <a href="qichat.html"><li>シナリオを使った柔軟な会話（QiChat）</li></a>
+        <a href="qrcode.html"><li>QRコードの読み取り</li></a>
+      </ol>
+      <a href="roboblocks.html"><h3>その他</h3></a>
+      <ul>
+        <a href="roboblocks.html"><li>Robo Blocksの各種操作</li></a>
+        <a href="help.html"><li>困った時は</li></a>
+        <a href="images.html"><li>素材画像</li></a>
+      </ul>
+    </aside>
+  </div>
+  <div class="clear"></div>
+  <footer>
+    <a href="variable.html"><img src="../images/nextPage.png"></a>
+  </footer>
+<!-- トップへ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+$(function () {
+   /** ページトップ処理 **/
+   // スクロールした場合
+   $(window).scroll(function() {
+       // スクロール位置が200を超えた場合
+       if ($(this).scrollTop() > 200) {
+           $('#pagetop').fadeIn();
+       } else {
+           // ページトップへをフェードアウト
+           $('#pagetop').fadeOut();
+       }
+   });
+
+   // ページトップクリック
+   $('#pagetop').click(function() {
+       // ページトップへスクロール
+       $('html, body').animate({
+           scrollTop: 0
+       }, 300);
+       return false;
+   });
+})(jQuery);
+</script>
+
+<a id="pagetop" href="#top" class="page_top" style="display: none;"><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+</body>
+</html>

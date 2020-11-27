@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>メディア創造基礎演習C</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/class.css">
+  <link rel="stylesheet" href="../css/hoverImage.css">
+  <link rel="stylesheet" href="../css/pagetop.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/favicon.png">
+</head>
+
+<body>
+  <header>
+    <a href="../index.html"><img src="../images/heading/title.png"></a>
+  </header>
+
+  <div id="main">
+    <img src="../images/heading/headline5.png" class="headline">
+    <main><!-- 以下本文 ------------------------------------------------------>
+    <img src="../images/heading/sound.png" class="heading">
+    <p>音を使うことで、効果的な演出をすることができます。</p>
+
+    <h2>音のブロック</h2>
+    <img src="../images/block1/24.png" class="left">
+    <p class="left" style="width:530px">音を最後まで再生するブロックです。<br>
+    選択した音を最後まで再生してから次のブロックを実行します。</p>
+    <div class="clear"></div>
+    <img src="../images/block1/25.png" class="left">
+    <p class="left" style="width:500px">音を再生するブロックです。<br>
+    音を再生します。<br>
+    音を最後まで再生するブロックと違い、音を再生中でも他のブロックを実行します。</p>
+    <div class="clear"></div>
+    <img src="../images/block1/26.png" class="left">
+    <p class="left">全ての音を止めるブロックです。<br>
+    再生中の全ての音を停止します。</p>
+    <div class="clear"></div>
+    <img src="../images/block1/27.png" class="left">
+    <p class="left" style="width:500px">ボリューム設定ブロックです。<br>音量を変化させます。<br>
+    音だけでなく、Pepperの声量もこれで変更できます。<br>
+    最大値は100、最小値は0です。</p>
+    <div class="clear"></div>
+    <img src="../images/block1/28.png" class="left">
+    <p class="left">ボリュームを変えるブロックです。<br>
+    音量を変化させることができます。<br>
+    単位は「%」です。</p>
+    <div class="clear"></div>
+    <img src="../images/block1/29.png" class="left">
+    <p class="left">ボリュームブロックです。<br>
+    現在のボリュームの値を出力します。<br>
+    最大値は100、最小値は0です。</p>
+    <div class="clear"></div>
+
+    <h2>音声ファイルの追加</h2>
+    <p>音声ファイルは<a href="display.html#addImage">画像の追加</a>と同じ方法で追加できます。<br>
+    追加できるファイル形式は ogg と wav です。<br>
+    その他のファイル形式からの変換は<a href="https://online-audio-converter.com/ja/" target="_blank">こちら</a></p>
+
+<!--sound-1--><h2>効果的に音を流そう</h2>
+    <p>RoboBlocksの「音」タブにある「質問」「アタリ」「ハズレ」の音を使って、2日目の<a href="touchBody.html#touchBody-2">「Pepperにタッチして答えてもらうクイズを作ろう」</a>のプログラムを変えよう。<br>
+    音声をプログラムで使用できるようにするには、画像の準備と同じ方法で音声ファイルをクリックして選んでおきます。<br>
+    また、マウスカーソルを音声ファイルの上に移動させると、試聴することができます。<br>
+    ここでは、音を最後まで再生するブロックを使います。<br>
+    プログラムを変えて実行してみよう。</p>
+    <img src="../images/program/sound-1.png">
+
+    </main>
+    <aside>
+      <a href="../index.html" class="hover"><h3>トップページ</h3></a>
+      <a href="talk.html"><h3>1日目 はじめよう</h3></a>
+      <ol>
+        <a href="talk.html"><li>しゃべらせてみよう</li></a>
+        <a href="move.html"><li>動かしてみよう</li></a>
+        <a href="display.html"><li>絵や文字を表示しよう</li></a>
+        <a href="hw1.html">まとめの課題【1】</a>
+      </ol>
+      <a href="touchBody.html"><h3>2日目 センサーでコミュ力アップ</h3></a>
+      <ol>
+        <a href="touchBody.html"><li>タッチセンサーを使おう</li></a>
+        <a href="listen.html"><li>音センサーで会話しよう</li></a>
+        <a href="hw2.html">まとめの課題【2】</a>
+      </ol>
+      <a href="repeat.html"><h3>3日目 基本処理1</h3></a>
+      <ol>
+        <a href="repeat.html"><li>同じ動作を繰り返そう</li></a>
+        <a href="random.html"><li>ランダムな数を利用しよう</li></a>
+        <a href="hw3.html">まとめの課題【3】</a>
+      </ol>
+      <a href="if.html"><h3>4日目 基本処理2</h3></a>
+      <ol>
+        <a href="if.html"><li>条件分岐をしよう</li></a>
+        <a href="touchPosition.html"><li>タッチセンサーと条件分岐</li></a>
+        <a href="variable.html"><li>変数を使おう</li></a>
+        <a href="hw4.html">まとめの課題【4】</a>
+      </ol>
+      <a href="sound.html"><h3>余裕があったらやってみよう</h3></a>
+      <ol>
+        <a href="sound.html" class="now"><li>音声ファイルの再生</li></a>
+        <a href="tracking.html"><li>人がいたらしゃべらせよう</li></a>
+        <a href="led.html"><li>目のLEDの色を変える</li></a>
+        <a href="qichat.html"><li>シナリオを使った柔軟な会話（QiChat）</li></a>
+        <a href="qrcode.html"><li>QRコードの読み取り</li></a>
+      </ol>
+      <a href="roboblocks.html"><h3>その他</h3></a>
+      <ul>
+        <a href="roboblocks.html"><li>Robo Blocksの各種操作</li></a>
+        <a href="help.html"><li>困った時は</li></a>
+        <a href="images.html"><li>素材画像</li></a>
+      </ul>
+    </aside>
+  </div>
+  <div class="clear"></div>
+  <footer>
+    <a href="tracking.html"><img src="../images/nextPage.png"></a>
+  </footer>
+<!-- トップへ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+$(function () {
+   /** ページトップ処理 **/
+   // スクロールした場合
+   $(window).scroll(function() {
+       // スクロール位置が200を超えた場合
+       if ($(this).scrollTop() > 200) {
+           $('#pagetop').fadeIn();
+       } else {
+           // ページトップへをフェードアウト
+           $('#pagetop').fadeOut();
+       }
+   });
+
+   // ページトップクリック
+   $('#pagetop').click(function() {
+       // ページトップへスクロール
+       $('html, body').animate({
+           scrollTop: 0
+       }, 300);
+       return false;
+   });
+})(jQuery);
+</script>
+
+<a id="pagetop" href="#top" class="page_top" style="display: none;"><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>メディア創造基礎演習C</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/class.css">
+  <link rel="stylesheet" href="../css/hoverImage.css">
+  <link rel="stylesheet" href="../css/pagetop.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="shortcut icon" href="../images/favicon.png">
+</head>
+
+<body>
+  <header>
+    <a href="../index.html"><img src="../images/heading/title.png"></a>
+  </header>
+
+  <div id="main">
+    <img src="../images/heading/headline2.png" class="headline">
+    <main><!-- 以下本文 ------------------------------------------------------>
+    <img src="../images/heading/touchBody.png" class="heading">
+
+    <p>センサーを使うことで、Pepperは外から情報を入力して反応できるようになります。<br>
+    それにより、人と簡単なコミュニケーションも可能になります。</p>
+
+<!--touchBody-1--><h2 class="firsth2">頭のタッチセンサーを使ってみよう</h2>
+    <video src="../videos/touchBody-1.mp4" controls></video>
+    <div class="note">
+      <img src="../images/heading/practice.png" class="noteHeading" alt="練習">
+      <div class="clear"></div>
+      <div class="sentence">
+        頭をさわられたとき、画面に「あたま」という文字を3秒間表示するプログラムを作ってみよう。
+      </div>
+    </div>
+
+    <p>体のタッチセンサーは頭、右手、左手、右バンパ、左バンパ、後ろバンパの6つがあります。<br>
+    センサーは動きのブロックと同じようにして切り替えることができます。</p>
+    <img src="../images/info/touchSensor1.png">
+    <img src="../images/info/touch-pair.png">
+
+<!--touchBody-2--><h2 id="touchBody-2">Pepperにタッチして答えてもらうクイズを作ろう</h2>
+    <p>Pepperが「問題です。赤道上で体重を量ると、北極や南極よりも軽くなる。まるだと思うなら頭を、ばつだと思うなら右手を触ってください。」と言った後、頭を触られたら「正解です」と言い、右手を触られたら「残念、不正解です」と言うプログラムを作ります。<br>
+    Pepperは「赤道」を「あかみち」と呼んでしまうので、プログラムではひらがなにします。</p>
+    <video src="../videos/touchBody-2.mp4" controls></video><!--動画の扉絵を変えること-->
+
+    <h2>問題</h2>
+    <p>「タイ旅行についてのエチケット問題です。タイ人の体で触ってもいいところはどこでしょうか。私の体に触って答えてください。」というクイズを出すプログラムを作ってみよう。</p>
+    <h4>【参考：タイ旅行のエチケット】</h4>
+    <ul>
+      <li><p>左手はトイレで使うものとされている不浄の手。握手するときや人に物を渡すときは左手は決して使わないこと。</p></li>
+      <li><p>頭は体の中で一番高い部位にあり、精霊が宿る場所とされている。そのため、タイ人の頭を触ってはいけない。それは小さな子供であっても同様。かわいいからといって頭をなでてはいけない。</p></li>
+    </ul>
+
+<!--touchScreen-1--><h2 id="touchScreen-1">画面のタッチセンサーを使ってみよう</h2>
+    <p class="left" style="width:280px">画面のタッチセンサーを使うと、触られた場所を横軸と縦軸の値で知ることができます。<br>
+    この仕掛けを使うことで、画面にメニューを表示しておいてタッチで選んでもらうとか、地図を表示しておいてタッチされたところを案内するといったこともできるようになります。</p>
+    <img src="../images/info/touchScreen.png" class="right">
+    <div class="clear"></div>
+    <video src="../videos/touchScreen-1.mp4" controls></video>
+    <div class="note">
+      <img src="../images/heading/practice.png" class="noteHeading" alt="練習">
+      <div class="clear"></div>
+      <div class="sentence">
+        動画を参考にして、さわられた場所の横軸と縦軸をしゃべるプログラムを作ってみよう。<br>
+        あとで必要になるので画面の四隅の横軸(X)と縦軸(Y)の値を調べてメモしておこう。
+      </div>
+    </div>
+
+
+    </main>
+    <aside>
+      <a href="../index.html" class="hover"><h3>トップページ</h3></a>
+      <a href="talk.html"><h3>1日目 はじめよう</h3></a>
+      <ol>
+        <a href="talk.html"><li>しゃべらせてみよう</li></a>
+        <a href="move.html"><li>動かしてみよう</li></a>
+        <a href="display.html"><li>絵や文字を表示しよう</li></a>
+        <a href="hw1.html">まとめの課題【1】</a>
+      </ol>
+      <a href="touchBody.html"><h3>2日目 センサーでコミュ力アップ</h3></a>
+      <ol>
+        <a href="touchBody.html" class="now"><li>タッチセンサーを使おう</li></a>
+        <a href="listen.html"><li>音センサーで会話しよう</li></a>
+        <a href="hw2.html">まとめの課題【2】</a>
+      </ol>
+      <a href="repeat.html"><h3>3日目 基本処理1</h3></a>
+      <ol>
+        <a href="repeat.html"><li>同じ動作を繰り返そう</li></a>
+        <a href="random.html"><li>ランダムな数を利用しよう</li></a>
+        <a href="hw3.html">まとめの課題【3】</a>
+      </ol>
+      <a href="if.html"><h3>4日目 基本処理2</h3></a>
+      <ol>
+        <a href="if.html"><li>条件分岐をしよう</li></a>
+        <a href="touchPosition.html"><li>タッチセンサーと条件分岐</li></a>
+        <a href="variable.html"><li>変数を使おう</li></a>
+        <a href="hw4.html">まとめの課題【4】</a>
+      </ol>
+      <a href="sound.html"><h3>余裕があったらやってみよう</h3></a>
+      <ol>
+        <a href="sound.html"><li>音声ファイルの再生</li></a>
+        <a href="tracking.html"><li>人がいたらしゃべらせよう</li></a>
+        <a href="led.html"><li>目のLEDの色を変える</li></a>
+        <a href="qichat.html"><li>シナリオを使った柔軟な会話（QiChat）</li></a>
+        <a href="qrcode.html"><li>QRコードの読み取り</li></a>
+      </ol>
+      <a href="roboblocks.html"><h3>その他</h3></a>
+      <ul>
+        <a href="roboblocks.html"><li>Robo Blocksの各種操作</li></a>
+        <a href="help.html"><li>困った時は</li></a>
+        <a href="images.html"><li>素材画像</li></a>
+      </ul>
+    </aside>
+  </div>
+  <div class="clear"></div>
+  <footer>
+    <a href="listen.html"><img src="../images/nextPage.png"></a>
+  </footer>
+<!-- トップへ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+$(function () {
+   /** ページトップ処理 **/
+   // スクロールした場合
+   $(window).scroll(function() {
+       // スクロール位置が200を超えた場合
+       if ($(this).scrollTop() > 200) {
+           $('#pagetop').fadeIn();
+       } else {
+           // ページトップへをフェードアウト
+           $('#pagetop').fadeOut();
+       }
+   });
+
+   // ページトップクリック
+   $('#pagetop').click(function() {
+       // ページトップへスクロール
+       $('html, body').animate({
+           scrollTop: 0
+       }, 300);
+       return false;
+   });
+})(jQuery);
+</script>
+
+<a id="pagetop" href="#top" class="page_top" style="display: none;"><i class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a>
+</body>
+</html>
